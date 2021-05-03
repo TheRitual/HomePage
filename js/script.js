@@ -105,7 +105,7 @@ function showTable(tableName) {
 }
 
 function showArticle(articleInfoSet) {
-    topImage.src = "http://dev.theritual.eu/homepage/img/" + articleInfoSet.image + ".jpg";
+    topImage.src = "img/" + articleInfoSet.image + ".jpg";
     topImage.setAttribute("alt", articleInfoSet.alt);
     for (let content of document.querySelectorAll(".js-articles")) {
         content.classList.add("article__articles--hidden");
