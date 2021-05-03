@@ -1,0 +1,36 @@
+/* favourites-menu.css */
+
+.favouritesMenu {
+    padding: 0px;
+    text-align: center;
+    margin: 50px auto 10px auto;
+}
+
+.favouritesMenu__list {
+    list-style-type: none;
+    text-indent: 0px;
+    padding: 0px;
+}
+
+.favouritesMenu__listItem {
+    display: inline-block;
+}
+
+.favouritesMenu__link {
+    font-family: 'Signika', sans-serif;
+    padding: 10px;
+    margin: 10px;
+    border-radius: 20px;
+    cursor: pointer;
+    display: inline-block;
+    line-height: 30px;
+    width: 150px;
+    background-color: #D9F572;
+    border: 1px solid #859F25;
+    color: #111;
+}
+
+.favouritesMenu__link:hover {
+    box-shadow: 0px 0px 25px 0px #0c3a2b;
+    background-color: #EAFAB0;
+}

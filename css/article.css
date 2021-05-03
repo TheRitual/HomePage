@@ -1,0 +1,56 @@
+/* article.css */
+
+.article__image {
+    max-height: 450px;
+    max-width: 100%;
+    display: block;
+    margin: 50px auto;
+    border-radius: 10px;
+    border: solid #000 5px;
+    box-shadow: 0px 0px 25px 0px #0c3a2b;
+}
+
+.article__header {
+    font-family: 'Dela Gothic One', cursive;
+    text-align: center;
+    margin: 50px;
+}
+
+.article__paragraph {
+    color: #232;
+    line-height: 1.5;
+}
+
+.article__special {
+    font-style: italic;
+}
+
+.article__articles--hidden {
+    display: none;
+}
+
+.goTop__paragraph {
+    text-align: right;
+}
+
+.goTop__button {
+    text-decoration: none;
+    font-weight: bold;
+    display: inline-block;
+    font-family: 'Signika', sans-serif;
+    padding: 10px;
+    margin: 20px;
+    border-radius: 20px;
+    border: 0px;
+    cursor: pointer;
+    display: inline-block;
+    background-color: #52B091;
+    color: #FFF;
+    text-align: center;
+}
+
+.goTop__button:hover {
+    background-color: #FFF;
+    color: #52B091;
+    box-shadow: 0px 0px 25px 0px #0c3a2b;
+}

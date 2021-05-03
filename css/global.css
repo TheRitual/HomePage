@@ -1,0 +1,21 @@
+/* global.css */
+
+html {
+    box-sizing: border-box;
+    -webkit-font-smoothing: antialiased;
+}
+
+*, ::after, ::before {
+    box-sizing: inherit;
+    -webkit-font-smoothing: inherit;
+}
+
+body {
+    font-family: 'Roboto', sans-serif;
+    background-color: #e7fbda;
+    margin: 0px;
+}
+
+a {
+    text-decoration: none;
+}
