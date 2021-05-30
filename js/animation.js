@@ -5,12 +5,12 @@
     let isWalking = false;
     let position = {
         x: 50,
-        y: 50,
+        y: 0,
     }
 
     let destination = {
-        x: 100,
-        y: 100,
+        x: 25,
+        y: 520,
     }
 
     const getSprite = (direction = "B", doTheStep = false) => {
@@ -107,7 +107,7 @@
         image.style.left = position.x - offsetX + "px";
         walk();
     }
-    
+
     if (window.innerWidth > 767) {
         init();
     }

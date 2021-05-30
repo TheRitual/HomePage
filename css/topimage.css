@@ -1,0 +1,12 @@
+.topImage {
+    max-width: 1200px;
+    min-width: 1024px;
+    height: 400px;
+    background-color: #2b3595;
+    margin: auto;
+    margin-top: 110px;
+    position: relative;
+    z-index: 2;
+    border-radius: 10px;
+    box-shadow: #000 0px 0px 10px;
+}

@@ -5,6 +5,7 @@
     position: absolute;
     display: block;
     user-select: none;
+    z-index: 1;
 }
 
 @media (max-width: 767px) {
