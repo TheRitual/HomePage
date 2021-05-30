@@ -37,7 +37,7 @@
 
 .menu__item:hover {
     background-color: #e14594;
-    box-shadow: #fff 0px 0px 15px;
+    box-shadow: #fff 0px 0px 20px;
     cursor: pointer;
 }
 
@@ -57,5 +57,11 @@
 }
 
 .menu__subLink {
-    padding-top: 10px;
+    padding: 10px;
+    border-radius: 4px;
+}
+
+.menu__subLink:hover {
+    background-color: #7045af;
+
 }
