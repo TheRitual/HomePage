@@ -97,7 +97,7 @@
     }
 
     const setNewDestination = () => {
-        destination.x = Math.floor(Math.random() * (getMargin() - 70)) + 70;
+        destination.x = Math.floor(Math.random() * (getMargin() - 80)) + 40;
         destination.y = Math.floor(Math.random() * (document.body.scrollHeight - 700)) + 600;
         if (Math.random() > 0.5) {
             destination.x += (900 + getMargin());
