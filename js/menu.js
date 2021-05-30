@@ -15,12 +15,12 @@
         document.querySelector(".js-menuCodeList").classList.add("menu__subList--hidden");
     })
 
-    document.querySelector(".js-menuPortfolio").addEventListener("mouseenter", () => {
-        document.querySelector(".js-menuPortfolioList").classList.remove("menu__subList--hidden");
+    document.querySelector(".js-menuFreeTime").addEventListener("mouseenter", () => {
+        document.querySelector(".js-menuFreeTimeList").classList.remove("menu__subList--hidden");
     })
 
-    document.querySelector(".js-menuPortfolio").addEventListener("mouseleave", () => {
-        document.querySelector(".js-menuPortfolioList").classList.add("menu__subList--hidden");
+    document.querySelector(".js-menuFreeTime").addEventListener("mouseleave", () => {
+        document.querySelector(".js-menuFreeTimeList").classList.add("menu__subList--hidden");
     })
 
     document.querySelector(".js-menuProjects").addEventListener("mouseenter", () => {
