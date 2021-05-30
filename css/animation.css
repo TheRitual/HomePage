@@ -6,3 +6,9 @@
     display: block;
     user-select: none;
 }
+
+@media (max-width: 767px) {
+    .animatedImage {
+        display: none;
+    }
+}

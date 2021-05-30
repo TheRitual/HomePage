@@ -36,20 +36,20 @@
 
         const d = new Date();
         const ms = d.getMilliseconds();
-        const modloForFrame = ms % 400;
+        const moduloForFrame = ms % 400;
 
         if (doTheStep) {
             switch (true) {
-                case modloForFrame < 100:
+                case moduloForFrame < 100:
                     frame = 0;
                     break;
-                case modloForFrame < 200:
+                case moduloForFrame < 200:
                     frame = 1;
                     break;
-                case modloForFrame < 300:
+                case moduloForFrame < 300:
                     frame = 0;
                     break;
-                case modloForFrame < 400:
+                case moduloForFrame < 400:
                     frame = 2;
                     break;
             }
@@ -64,7 +64,7 @@
         if (position.x === destination.x) {
             if (position.y === destination.y) {
                 isWalking = false;
-                setNewDestionation();
+                setNewDestination();
                 doTheStep = false;
                 direction = "B";
 
@@ -94,13 +94,11 @@
         }
     }
 
-    const setNewDestionation = () => {
-        let avaliableWidth = window.innerWidth - 100;
-        let avaliableHeight = window.innerHeight + window.pageYOffset - 100;
-        destination.x = Math.floor(Math.random() * avaliableWidth) + 50;
-        destination.y = Math.floor(Math.random() * avaliableHeight) + 50;
-        console.log("New X destination: " + destination.x);
-        console.log("New Y destination: " + destination.y);
+    const setNewDestination = () => {
+        let availableWidth = window.innerWidth - 100;
+        let availableHeight = window.innerHeight + window.pageYOffset - 100;
+        destination.x = Math.floor(Math.random() * availableWidth) + 50;
+        destination.y = Math.floor(Math.random() * availableHeight) + 50;
         setTimeout(walk, 3000);
     }
 
@@ -109,7 +107,10 @@
         image.style.left = position.x - offsetX + "px";
         walk();
     }
+    
+    if (window.innerWidth > 767) {
+        init();
+    }
 
-    init();
 
 }
