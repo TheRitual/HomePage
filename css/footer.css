@@ -1,0 +1,12 @@
+.footer {
+    position: relative;
+    height: 50px;
+    padding: 20px;
+    background-color: #7045af;
+    box-shadow: #000 0px 0px 10px;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+    z-index: 5;
+    margin: 0;
+    width: 100%;
+}

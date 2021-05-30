@@ -4,13 +4,15 @@
     const offsetY = 32;
     let isWalking = false;
     let position = {
-        x: 50,
-        y: 0,
+        x: 500,
+        y: 400,
     }
 
+    let getMargin = () => {return (window.innerWidth - 900) /2 ;}
+
     let destination = {
-        x: 25,
-        y: 520,
+        x: getMargin() / 2,
+        y: 545,
     }
 
     const getSprite = (direction = "B", doTheStep = false) => {
@@ -61,29 +63,29 @@
         isWalking = true;
         let doTheStep = true;
         let direction = "B";
-        if (position.x === destination.x) {
-            if (position.y === destination.y) {
+        if (position.y === destination.y) {
+            if (position.x === destination.x) {
                 isWalking = false;
                 setNewDestination();
                 doTheStep = false;
                 direction = "B";
 
             } else {
-                if (position.y > destination.y) {
-                    position.y--;
-                    direction = "T";
+                if (position.x > destination.x) {
+                    position.x--;
+                    direction = "L";
                 } else {
-                    position.y++;
-                    direction = "B";
+                    position.x++;
+                    direction = "R";
                 }
             }
         } else {
-            if (position.x > destination.x) {
-                position.x--;
-                direction = "L";
+            if (position.y > destination.y) {
+                position.y--;
+                direction = "T";
             } else {
-                position.x++;
-                direction = "R";
+                position.y++;
+                direction = "B";
             }
         }
         image.src = getSprite(direction, doTheStep);
@@ -95,10 +97,12 @@
     }
 
     const setNewDestination = () => {
-        let availableWidth = window.innerWidth - 100;
-        let availableHeight = window.innerHeight + window.pageYOffset - 100;
-        destination.x = Math.floor(Math.random() * availableWidth) + 50;
-        destination.y = Math.floor(Math.random() * availableHeight) + 50;
+        destination.x = Math.floor(Math.random() * (getMargin() - 70)) + 70;
+        destination.y = Math.floor(Math.random() * (document.body.scrollHeight - 700)) + 600;
+        if (Math.random() > 0.5) {
+            destination.x += (900 + getMargin());
+        }
+        console.log("X: " + destination.x + "\nY: " + destination.y + "\nM: " + getMargin());
         setTimeout(walk, 3000);
     }
 
