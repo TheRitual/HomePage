@@ -1,0 +1,8 @@
+.animatedImage {
+    width: 64px;
+    height: 64px;
+    image-rendering: pixelated;
+    position: absolute;
+    display: block;
+    user-select: none;
+}

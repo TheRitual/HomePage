@@ -1,4 +1,12 @@
 /* global.css */
+/* 
+font-family: 'Comfortaa', cursive;
+font-family: 'Freckle Face', cursive;
+font-family: 'Kelly Slab', cursive;
+font-family: 'Russo One', sans-serif;
+font-family: 'Staatliches', cursive;
+font-family: 'VT323', monospace;
+*/
 
 html {
     box-sizing: border-box;
@@ -11,9 +19,9 @@ html {
 }
 
 body {
-    font-family: 'Roboto', sans-serif;
-    background-color: #e7fbda;
+    background-color: #182952;
     margin: 0px;
+    font-family: 'VT323', monospace;
 }
 
 a {
