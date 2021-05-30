@@ -1,6 +1,6 @@
 .menu {
     display: flex;
-    height: 70px;
+    height: 80px;
     border: 0;
     padding: 20px;
     flex-wrap: nowrap;
@@ -16,18 +16,23 @@
     border-bottom-right-radius: 10px;
     z-index: 5;
     user-select: none;
+    align-items: flex-start;
 }
 
 .menu__item {
     flex-basis: 160px;
+    font-family: 'Staatliches', cursive;
+    background-color: #7045af;
+    display: block;
+    min-width: 160px;
     text-align: center;
     color: #FFF;
-    background-color: #7045af;
     padding: 10px;
     border-radius: 10px;
     box-shadow: #fff 0px 0px 10px;
     font-size: 17px;
-    font-family: 'Staatliches', cursive;
+    position: relative;
+    z-index: 2;
 }
 
 .menu__item:hover {
@@ -36,8 +41,21 @@
     cursor: pointer;
 }
 
+
 .menu__icon {
     height: 25px;
     padding-right: 10px;
     vertical-align: sub;
+}
+
+.menu__subList {
+    list-style: none;
+}
+
+.menu__subList--hidden {
+    display: none;
+}
+
+.menu__subLink {
+    padding-top: 10px;
 }
