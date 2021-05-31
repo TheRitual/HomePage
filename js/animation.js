@@ -4,7 +4,7 @@
     const offsetY = 32;
     let isFirstRun = true;
     let isWalking = true;
-    let getMargin = () => { return (window.innerWidth - 900) / 2; }
+    let getMargin = () => { return Math.floor((window.innerWidth - 900) / 2); }
 
     let position = {
         x: window.innerWidth / 2,
@@ -12,7 +12,7 @@
     }
 
     let destination = {
-        x: getMargin() / 2,
+        x: Math.floor(getMargin() / 2),
         y: 545,
     }
 
@@ -198,8 +198,8 @@
     }
 
     const setNewDestination = () => {
-        destination.x = Math.floor(Math.random() * (getMargin() - 100)) + 35;
-        destination.y = Math.floor(Math.random() * (document.body.scrollHeight - 700)) + 700;
+        destination.x = Math.floor(Math.random() * (getMargin() - 100) + 35);
+        destination.y = Math.floor(Math.random() * (document.body.scrollHeight - 700) + 700);
         if (Math.random() > 0.5) {
             destination.x += (900 + getMargin());
         }
@@ -218,6 +218,4 @@
     if (window.innerWidth > 767) {
         init();
     }
-
-
 }

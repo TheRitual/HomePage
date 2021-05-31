@@ -17,6 +17,7 @@
     z-index: 5;
     user-select: none;
     align-items: flex-start;
+    margin: 0;
 }
 
 .menu__item {
@@ -63,5 +64,5 @@
 }
 
 .menu__link:hover {
-    background-color: #7045af;
+    background-color: #3cc3a5;
 }

@@ -16,7 +16,7 @@
 
     const changeTop = (image, text) => {
         const topText = document.querySelector(".topImage__text");
-        setTimeout(() => { topText.innerHTML = text; }, 500);
+        topText.innerHTML = text;
         if (useCover) {
             topImageCover.style.backgroundImage = `url('img/top/${image}')`;
         } else {

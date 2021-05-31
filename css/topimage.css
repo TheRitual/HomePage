@@ -20,7 +20,6 @@
     border-radius: inherit;
     background-image: url(../img/top/dummy2.jpg);
     transition: all 1.5s;
-    transition-delay: 0.4s;
     filter: blur(70px);
     opacity: 0;
 }
@@ -39,4 +38,5 @@
     font-size: 50px;
     font-family: 'Freckle Face', cursive; 
     text-shadow: 2px 4px 4px#182952;
+    user-select: none;
 }
