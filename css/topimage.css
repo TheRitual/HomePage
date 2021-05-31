@@ -10,7 +10,7 @@
     z-index: 2;
     border-radius: 10px;
     box-shadow: #000 0px 0px 10px;
-    background-image: url(../img/top/dummy1.jpg);
+    background-image: url(../img/top/monk.jpg);
     padding: 0;
 }
 
@@ -28,4 +28,15 @@
 .topImage__cover--on {
     filter: blur(0px);
     opacity: 1;
+}
+
+.topImage__text {
+    position: relative;
+    bottom: 70px;
+    left: 50px;
+    display: block;
+    color: white;
+    font-size: 50px;
+    font-family: 'Freckle Face', cursive; 
+    text-shadow: 2px 4px 4px#182952;
 }

@@ -1,6 +1,7 @@
 {
     const linkBiogram = document.querySelector(".js-linkBiogram");
-    const linkSocialMedia = document.querySelector(".js-linkSocialMedia");
+    const linkAboutMe = document.querySelector(".js-linkAboutMe");
+    const linkContact = document.querySelector(".js-linkContact");
     const links = document.querySelectorAll(".js-menuLink");
 
     const topImageCover = document.querySelector(".js-topImageCover");
@@ -13,16 +14,19 @@
         });
     });
 
-    const changeImage = (image) => {
-        if(useCover) {
-            topImageCover.style.backgroundImage=`url('img/top/${image}')`;
-        }else {
-            topImage.style.backgroundImage=`url('img/top/${image}')`;
+    const changeTop = (image, text) => {
+        const topText = document.querySelector(".topImage__text");
+        setTimeout(() => { topText.innerHTML = text; }, 500);
+        if (useCover) {
+            topImageCover.style.backgroundImage = `url('img/top/${image}')`;
+        } else {
+            topImage.style.backgroundImage = `url('img/top/${image}')`;
         }
         useCover = !useCover;
     }
 
-    linkBiogram.addEventListener("click", () => { changeImage("dummy3.jpg"); });
-    linkSocialMedia.addEventListener("click", () => { changeImage("dummy4.jpg"); });
+    linkBiogram.addEventListener("click", () => { changeTop("dummy3.jpg", "Biogram"); });
+    linkAboutMe.addEventListener("click", () => { changeTop("monk.jpg", "About Me"); });
+    linkContact.addEventListener("click", () => { changeTop("dummy4.jpg", "Contact"); });
 
 }

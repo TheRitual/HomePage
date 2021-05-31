@@ -1,6 +1,6 @@
 .menu {
     display: flex;
-    height: 80px;
+    height: 90px;
     border: 0;
     padding: 20px;
     flex-wrap: nowrap;
@@ -20,7 +20,7 @@
 }
 
 .menu__item {
-    flex-basis: 160px;
+    flex-basis: 170px;
     font-family: 'Staatliches', cursive;
     background-color: #7045af;
     display: block;
@@ -56,12 +56,12 @@
     display: none;
 }
 
-.menu__subListElement{
-    padding: 10px;
+.menu__link{
+    display: block;
+    padding: 5px;
     border-radius: 4px;
 }
 
-.menu__subListElement:hover {
+.menu__link:hover {
     background-color: #7045af;
-
 }
