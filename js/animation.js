@@ -2,17 +2,67 @@
     const image = document.querySelector(".js-animation");
     const offsetX = 32;
     const offsetY = 32;
-    let isWalking = false;
+    let isFiestMessage = true;
+
+    let getMargin = () => { return (window.innerWidth - 900) / 2; }
+
     let position = {
-        x: 500,
+        x: window.innerWidth / 2,
         y: 400,
     }
-
-    let getMargin = () => {return (window.innerWidth - 900) /2 ;}
 
     let destination = {
         x: getMargin() / 2,
         y: 545,
+    }
+
+
+    const hideInformation = () => {
+        const bubble = document.querySelector(".js-bubble");
+        bubble.classList.add("bubble--hidden");
+        bubble.classList.remove("bubble--left");
+        bubble.classList.remove("bubble--right");
+    }
+
+    document.querySelector(".js-bubble").addEventListener("click", () => {
+        hideInformation();
+    });
+
+    const getNewText = () => {
+        const texts = [
+            "Marcin can play the guitar.",
+            "Marcin comes from Poland but has lived in Germany, Scotland, England, the Netherlands and France.",
+            "Marcin started learning programming when he was 7 years old.",
+            "Marcin knows how to play the guitar and learns to play the violin and keyboards.",
+            "Marcin speaks Polish natively, but he can also communicate in English, German and basic Spanish and Japanese.",
+            "Marcin started learning programming with Turbo Pascal",
+            "Marcin learned programming in C, C ++, C #, Java, JS, PHP, Bash as a hobby.",
+            "Marcin has experience in working with Adobe software such as Photoshop, Audition, Premiere and After Effects",
+            "Marcin loves to run and train calisthenics.",
+            "Marcin's favorite bands are Thirty Seconds to Mars and Twenty One Pilots",
+        ];
+        const random = Math.floor(Math.random() * texts.length);
+        return texts[random];
+    }
+
+    const showNewInformation = () => {
+        if (isFiestMessage) {
+            isFiestMessage = !isFiestMessage;
+        } else {
+            const bubble = document.querySelector(".js-bubble");
+            bubble.classList.remove("bubble--hidden");
+            if (position.x > window.innerWidth / 2) {
+                bubble.classList.add("bubble--right");
+                bubble.style.left = position.x - 215 + "px";
+            } else {
+
+                bubble.classList.add("bubble--left");
+                bubble.style.left = position.x - 15 + "px";
+            }
+            document.querySelector(".js-bubble__text").innerHTML = getNewText();
+            bubble.style.top = position.y - bubble.clientHeight - 60 + "px";
+            console.log(bubble.clientHeight);
+        }
     }
 
     const getSprite = (direction = "B", doTheStep = false) => {
@@ -66,6 +116,7 @@
         if (position.y === destination.y) {
             if (position.x === destination.x) {
                 isWalking = false;
+                showNewInformation();
                 setNewDestination();
                 doTheStep = false;
                 direction = "B";
@@ -96,14 +147,19 @@
         }
     }
 
+    const initiateNextMove = () => {
+        hideInformation();
+        walk();
+    }
+
     const setNewDestination = () => {
-        destination.x = Math.floor(Math.random() * (getMargin() - 80)) + 40;
-        destination.y = Math.floor(Math.random() * (document.body.scrollHeight - 700)) + 600;
+        destination.x = Math.floor(Math.random() * (getMargin() - 90)) + 45;
+        destination.y = Math.floor(Math.random() * (document.body.scrollHeight - 700)) + 700;
         if (Math.random() > 0.5) {
             destination.x += (900 + getMargin());
         }
         console.log("X: " + destination.x + "\nY: " + destination.y + "\nM: " + getMargin());
-        setTimeout(walk, 3000);
+        setTimeout(initiateNextMove, 60000);
     }
 
     const init = () => {

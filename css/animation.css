@@ -13,3 +13,52 @@
         display: none;
     }
 }
+
+.bubble {
+    position: absolute;
+    width: 220px;
+    background: #7045af;
+    border-radius: 40px;
+    padding: 20px;
+    text-align: center;
+    color: #fff;
+    z-index: 10;
+    vertical-align: middle;
+}
+
+.bubble__text {
+    font-size: 21px;
+    font-family: 'Freckle Face', cursive;
+    text-shadow: 0px 4px 3px#182952;
+}
+
+.bubble--hidden {
+    display: none;
+}
+
+.bubble--left:before {
+    content: "";
+    width: 0px;
+    height: 0px;
+    position: absolute;
+    border-left: 24px solid #7045af;
+    border-right: 12px solid transparent;
+    border-top: 12px solid #7045af;
+    border-bottom: 20px solid transparent;
+    left: 32px;
+    bottom: -24px;
+}
+
+.bubble--right:before {
+    content: "";
+    width: 0px;
+    height: 0px;
+    position: absolute;
+    border-right: 24px solid #7045af;
+    border-left: 12px solid transparent;
+    border-top: 12px solid #7045af;
+    border-bottom: 20px solid transparent;
+    left: 165px;
+    bottom: -24px;
+}
+
