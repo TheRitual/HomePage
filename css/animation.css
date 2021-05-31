@@ -6,6 +6,7 @@
     display: block;
     user-select: none;
     z-index: 1;
+    cursor: no-drop;
 }
 
 @media (max-width: 767px) {
@@ -22,8 +23,10 @@
     padding: 20px;
     text-align: center;
     color: #fff;
-    z-index: 10;
+    z-index: 4;
     vertical-align: middle;
+    user-select: none;
+    cursor: pointer;
 }
 
 .bubble__text {
