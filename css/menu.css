@@ -56,12 +56,12 @@
     display: none;
 }
 
-.menu__subLink {
+.menu__subListElement{
     padding: 10px;
     border-radius: 4px;
 }
 
-.menu__subLink:hover {
+.menu__subListElement:hover {
     background-color: #7045af;
 
 }

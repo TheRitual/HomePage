@@ -10,4 +10,22 @@
     z-index: 2;
     border-radius: 10px;
     box-shadow: #000 0px 0px 10px;
+    background-image: url(../img/top/dummy1.jpg);
+    padding: 0;
+}
+
+.topImage__cover {
+    width: inherit;
+    height: inherit;
+    border-radius: inherit;
+    background-image: url(../img/top/dummy2.jpg);
+    transition: all 1.5s;
+    transition-delay: 0.4s;
+    filter: blur(70px);
+    opacity: 0;
+}
+
+.topImage__cover--on {
+    filter: blur(0px);
+    opacity: 1;
 }

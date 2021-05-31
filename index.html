@@ -26,54 +26,58 @@
   <link href="css/animation.css" rel="stylesheet">
   <script defer src="js/animation.js"></script>
   <script defer src="js/menu.js"></script>
+  <script defer src="js/imageslider.js"></script>
 </head>
 
 <body>
   <img src="img/frames/b0.png" class="js-animation animatedImage">
   <nav class="menu">
     <div class="menu__item js-menuAboutMe">
-      <a class="menu__link"><img src="img/icons/aboutme.png" class="menu__icon">About Me</a>
+      <a class="menu__link js-menuLink"><img src="img/icons/aboutme.png" class="menu__icon">About Me</a>
       <ul class="menu__subList menu__subList--hidden js-menuAboutMeList">
-        <li class="menu__subLink">Biogram</li>
-        <li class="menu__subLink">Social Media</li>
+        <li class="menu__subListElement"><a class="menu__link js-menuLink js-linkBiogram">Biogram</a></li>
+        <li class="menu__subListElement"><a class="menu__link js-menuLink js-linkSocialMedia">Social Media</a></li>
       </ul>
     </div>
     <div class="menu__item js-menuCode">
-      <a class="menu__link"><img src="img/icons/code.png" class="menu__icon">Coding</a>
+      <a class="menu__link js-menuLink"><img src="img/icons/code.png" class="menu__icon">Coding</a>
       <ul class="menu__subList menu__subList--hidden js-menuCodeList">
-        <li class="menu__subLink">Experience</li>
-        <li class="menu__subLink">My GitHub</li>
+        <li class="menu__subListElement">Experience</li>
+        <li class="menu__subListElement">My GitHub</li>
       </ul>
     </div>
     <div class="menu__item js-menuProjects">
-      <a class="menu__link"><img src="img/icons/projects.png" class="menu__icon">Projects</a>
+      <a class="menu__link js-menuLink"><img src="img/icons/projects.png" class="menu__icon">Projects</a>
       <ul class="menu__subList menu__subList--hidden js-menuProjectsList">
-        <li class="menu__subLink">Currency Exchange</li>
+        <li class="menu__subListElement">Currency Exchange</li>
       </ul>
     </div>
     <div class="menu__item js-menuFreeTime">
-      <a class="menu__link"><img src="img/icons/freetime.png" class="menu__icon">Free Time</a>
+      <a class="menu__link js-menuLink"><img src="img/icons/freetime.png" class="menu__icon">Free Time</a>
       <ul class="menu__subList menu__subList--hidden js-menuFreeTimeList">
-        <li class="menu__subLink">Photo Edition</li>
-        <li class="menu__subLink">Video</li>
-        <li class="menu__subLink">Sport</li>
+        <li class="menu__subListElement">Photo Edition</li>
+        <li class="menu__subListElement">Video</li>
+        <li class="menu__subListElement">Sport</li>
       </ul>
       </a>
     </div>
     <div class="menu__item js-menuPhilosophy">
-      <a class="menu__link"><img src="img/icons/philosophy.png" class="menu__icon">Life
+      <a class="menu__link js-menuLink"><img src="img/icons/philosophy.png" class="menu__icon">Life
         Philosophy</a>
       <ul class="menu__subList menu__subList--hidden js-menuPhilosophyList">
-        <li class="menu__subLink">Goals</li>
-        <li class="menu__subLink">Society</li>
-        <li class="menu__subLink">Education</li>
+        <li class="menu__subListElement">Goals</li>
+        <li class="menu__subListElement">Society</li>
+        <li class="menu__subListElement">Education</li>
       </ul>
     </div>
 
   </nav>
 
-  <section class="topImage">
-  </section>
+  <div class="topImage js-topImage">
+    <div class="topImage__cover js-topImageCover">
+
+    </div>
+  </div>
 
   <main class="main">
   </main>
