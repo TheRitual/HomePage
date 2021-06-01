@@ -7,4 +7,24 @@
     z-index: 2;
     border-radius: 10px;
     box-shadow: #000 0px 0px 10px;
+    padding: 25px;
+    color: #fff;
+}
+
+.main__categoryHeader {
+    background-color: #e14594EE;
+    padding: 15px;
+    text-align: center;
+    font-family: 'Staatliches', cursive;
+    letter-spacing: 1px;
+    border-radius: 10px;
+}
+
+.main__subCategoryHeader {
+    background-color: #3cc3a5;
+    padding: 10px;
+    text-align: center;
+    font-family: 'Staatliches', cursive;
+    letter-spacing: 2px;
+    border-radius: 10px;
 }
