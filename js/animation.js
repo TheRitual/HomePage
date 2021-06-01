@@ -4,7 +4,10 @@
     const offsetY = 32;
     let isFirstRun = true;
     let isWalking = true;
-    let getMargin = () => { return Math.floor((window.innerWidth - 900) / 2); }
+    let doTheAnimation = window.innerWidth > 1024;
+    let getMargin = () => {
+        return Math.floor((window.innerWidth - 900) / 2);
+    }
 
     let position = {
         x: window.innerWidth / 2,
@@ -152,40 +155,42 @@
     }
 
     const walk = () => {
-        isWalking = true;
-        let doTheStep = true;
-        let direction = "B";
-        if (position.y === destination.y) {
-            if (position.x === destination.x) {
-                isWalking = false;
-                showNewInformation();
-                setNewDestination();
-                doTheStep = false;
-                direction = "B";
+        if (doTheAnimation) {
+            isWalking = true;
+            let doTheStep = true;
+            let direction = "B";
+            if (position.y === destination.y) {
+                if (position.x === destination.x) {
+                    isWalking = false;
+                    showNewInformation();
+                    setNewDestination();
+                    doTheStep = false;
+                    direction = "B";
 
-            } else {
-                if (position.x > destination.x) {
-                    position.x--;
-                    direction = "L";
                 } else {
-                    position.x++;
-                    direction = "R";
+                    if (position.x > destination.x) {
+                        position.x--;
+                        direction = "L";
+                    } else {
+                        position.x++;
+                        direction = "R";
+                    }
+                }
+            } else {
+                if (position.y > destination.y) {
+                    position.y--;
+                    direction = "T";
+                } else {
+                    position.y++;
+                    direction = "B";
                 }
             }
-        } else {
-            if (position.y > destination.y) {
-                position.y--;
-                direction = "T";
-            } else {
-                position.y++;
-                direction = "B";
+            image.src = getSprite(direction, doTheStep);
+            if (doTheStep) {
+                image.style.top = position.y - offsetY + "px";
+                image.style.left = position.x - offsetX + "px";
+                setTimeout(walk, 10);
             }
-        }
-        image.src = getSprite(direction, doTheStep);
-        if (doTheStep) {
-            image.style.top = position.y - offsetY + "px";
-            image.style.left = position.x - offsetX + "px";
-            setTimeout(walk, 10);
         }
     }
 
@@ -194,7 +199,9 @@
         image.style.cursor = "no-drop";
         hideInformation();
         walk();
-        if (isFirstRun) { isFirstRun = !isFirstRun; }
+        if (isFirstRun) {
+            isFirstRun = !isFirstRun;
+        }
     }
 
     const setNewDestination = () => {
@@ -215,7 +222,9 @@
         walk();
     }
 
-    if (window.innerWidth > 767) {
-        init();
-    }
+    init();
+
+    // window.addEventListener('resize', () => {
+    //     window.innerWidth > 1024 ? doTheAnimation = true : doTheAnimation = false;
+    // });
 }

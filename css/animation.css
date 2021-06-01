@@ -9,12 +9,6 @@
     cursor: no-drop;
 }
 
-@media (max-width: 767px) {
-    .animatedImage {
-        display: none;
-    }
-}
-
 .bubble {
     top:0;
     position: absolute;
@@ -67,4 +61,13 @@
     border-bottom: 20px solid transparent;
     left: 165px;
     bottom: -24px;
+}
+
+@media screen and (max-width: 1024px) {
+    .animatedImage {
+        display: none;
+    }
+    .bubble {
+        display: none;
+    }
 }

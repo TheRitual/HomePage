@@ -1,14 +1,14 @@
 .main {
-    width: 900px;
-    min-height: 500px;
     background-color: #2b3595F9;
-    margin: 70px auto 50px auto;
-    position: relative;
-    z-index: 2;
     border-radius: 10px;
     box-shadow: #000 0px 0px 10px;
-    padding: 25px;
     color: #fff;
+    margin: 70px auto 50px auto;
+    min-height: 500px;
+    padding: 25px;
+    position: relative;
+    width: 900px;
+    z-index: 2;    
 }
 
 .main__categoryHeader {
@@ -27,4 +27,16 @@
     font-family: 'Staatliches', cursive;
     letter-spacing: 2px;
     border-radius: 10px;
+}
+
+@media screen and (max-width: 1024px) {
+    .main {
+        border-radius: 10px;
+        box-shadow: #000 0px 0px 5px;
+        color: #fff;
+        margin: 70px 0 50px 0;
+        padding: 25px;
+        position: static;
+        width: 100%;
+    }
 }

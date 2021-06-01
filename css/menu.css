@@ -1,38 +1,36 @@
 .menu {
-    display: flex;
-    height: 90px;
-    border: 0;
-    padding: 20px;
-    flex-wrap: nowrap;
+    align-items: flex-start;
     background-color: #2b3595;
-    align-items: center;
-    justify-content: space-evenly;
-    box-shadow: #000 0px 0px 10px;
-    position: fixed;
-    top: 0;
-    left: 0;
-    right: 0;
+    border: 0;
     border-bottom-left-radius: 10px;
     border-bottom-right-radius: 10px;
+    box-shadow: #000 0px 0px 10px;
+    display: flex;
+    flex-wrap: nowrap;
+    height: 90px;
+    justify-content: space-evenly;
+    margin: 0 auto;
+    padding: 20px 0;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    transition: all 1s;
     z-index: 5;
-    user-select: none;
-    align-items: flex-start;
-    margin: 0;
 }
 
 .menu__item {
-    flex-basis: 170px;
-    font-family: 'Staatliches', cursive;
     background-color: #7045af;
-    display: block;
-    min-width: 160px;
-    text-align: center;
-    color: #FFF;
-    padding: 10px;
     border-radius: 10px;
     box-shadow: #fff 0px 0px 10px;
+    color: #FFF;
+    display: block;
+    flex-basis: 170px;
+    font-family: 'Staatliches', cursive;
     font-size: 17px;
+    padding: 10px;
     position: relative;
+    text-align: center;
+    transition: all 0.5s;
     z-index: 2;
 }
 
@@ -42,10 +40,9 @@
     cursor: pointer;
 }
 
-
 .menu__icon {
     height: 25px;
-    padding-right: 10px;
+    margin-right: 10px;
     vertical-align: sub;
 }
 
@@ -57,12 +54,39 @@
     display: none;
 }
 
-.menu__link{
+.menu__link {
     display: block;
     padding: 5px;
     border-radius: 4px;
+    transition: all 0.3s;
+    color: #fff;
 }
 
 .menu__link:hover {
     background-color: #3cc3a5;
+}
+
+@media screen and (max-width: 1024px) {
+    .menu {
+        height: 160px;
+        justify-content: space-evenly;
+        width: 100%;
+    }
+    .menu__item {
+        flex-basis: 85px;
+        padding: 10px;
+        font-size: 15px;
+        box-shadow: #fff 0px 0px 5px;
+    }
+    .menu__subList {
+        padding: 0;
+    }
+    .menu_link {
+        margin-bottom: 15px;
+    }
+    .menu__icon {
+        display: block;
+        margin: 10px auto;
+        padding: 0px;
+    }
 }
