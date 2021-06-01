@@ -16,6 +16,7 @@
 }
 
 .bubble {
+    top:0;
     position: absolute;
     width: 220px;
     background: #7045af;
@@ -27,6 +28,8 @@
     vertical-align: middle;
     user-select: none;
     cursor: pointer;
+    transition: opacity 0.2s;
+    opacity: 1;
 }
 
 .bubble__text {
@@ -36,7 +39,8 @@
 }
 
 .bubble--hidden {
-    display: none;
+    opacity: 0;
+    pointer-events: none;
 }
 
 .bubble--left:before {
@@ -64,4 +68,3 @@
     left: 165px;
     bottom: -24px;
 }
-
