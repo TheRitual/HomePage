@@ -33,22 +33,23 @@
 }
 
 .topImage__text {
-    position: relative;
     bottom: 70px;
-    left: 50px;
-    display: block;
     color: white;
-    font-size: 50px;
+    display: block;
     font-family: 'Freckle Face', cursive; 
+    font-size: 50px;
+    left: 50px;
+    margin: 0;
+    position: relative;
     text-shadow: 2px 4px 4px#182952;
+    transition: all 1s;
     user-select: none;
     width: 300px;
-    transition: all 1s;
 }
 
-@media screen and (max-width: 1024px) {
+@media (max-width: 1024px) {
     .topImage {
-        min-width: 400px;
+        min-width: 480px;
         height: 400px;
         width: 100%;
         margin: 180px 0 0 0;
@@ -59,8 +60,14 @@
     }
 }
 
-@media screen and (max-width: 480px) {
+@media (max-width: 480px) {
+    .topImage {
+        margin: 110px 0 0 0;
+        min-width: 200px;
+    }
+
     .topImage__text {
         font-size: 25px;
+        width: 200px;
     }
 }

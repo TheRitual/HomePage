@@ -55,20 +55,20 @@
 }
 
 .menu__link {
+    border-radius: 4px;
+    color: #fff;
     display: block;
     padding: 5px;
-    border-radius: 4px;
     transition: all 0.3s;
-    color: #fff;
 }
 
 .menu__link:hover {
     background-color: #3cc3a5;
 }
 
-@media screen and (max-width: 1024px) {
+@media (max-width: 1024px) {
     .menu {
-        height: 160px;
+        height: 150px;
         justify-content: space-evenly;
         width: 100%;
     }
@@ -88,5 +88,34 @@
         display: block;
         margin: 10px auto;
         padding: 0px;
+    }
+}
+
+@media (max-width: 480px) {
+    .menu {
+        height: 90px;
+        justify-content: space-evenly;
+        width: 98%;
+        left: 1%;
+    }
+
+    .menu__item {
+        flex-basis: 40px;
+        padding: 5px;
+        font-size: 15px;
+        box-shadow: #fff 0px 0px 5px;
+    }
+    .menu__subList {
+        padding: 0;
+    }
+    .menu_link {
+        margin-bottom: 15px;
+    }
+    .menu__icon {
+        margin: 0;
+    }
+
+    .menu__categoryText {
+        display: none;
     }
 }
