@@ -1,18 +1,18 @@
 .topImage {
-    max-width: 1200px;
-    min-width: 1024px;
-    height: 400px;
     background-color: #7045af;
-    margin: 110px auto 30px auto;
-    margin-top: 110px;
-    position: relative;
-    z-index: 2;
-    border-radius: 10px;
-    box-shadow: #000 0px 0px 10px;
     background-image: url(../img/top/monk.jpg);
     background-position: center;
+    background-size: cover;
+    border-radius: 10px;
+    box-shadow: #000 0px 0px 10px;
+    height: 400px;
+    margin: 110px auto 30px auto;
+    max-width: 1200px;
+    min-width: 1024px;
     padding: 0;
+    position: relative;
     transition: all 1.5s;
+    z-index: 2;
 }
 
 .topImage__cover {
@@ -21,7 +21,7 @@
     border-radius: inherit;
     background-image: url(../img/top/dummy2.jpg);
     background-position: center;
-    background-size: cover;
+    background-size: inherit;
     transition: all 1.5s;
     filter: blur(70px);
     opacity: 0;
