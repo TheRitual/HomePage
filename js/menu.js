@@ -100,8 +100,6 @@
         });
     });
 
-
-
     arrow.addEventListener("click", () => {
         if (isMenuHidden) {
             showMenu();
