@@ -4,6 +4,7 @@
     padding: 0;
     position: fixed;
     top: 0;
+    transition: all 1s;
     width: 100%;
     z-index: 5;
 }
@@ -75,10 +76,10 @@
 }
 
 .menu__arrow {
-    color: #e14594EE;
+    color: #e1459499;
     margin: 5px auto;
     font-size: 30px;
-    background-color: #7045afA0;
+    background-color: #7045af99;
     width: 50px;
     height: 50px;
     text-align: center;
@@ -89,8 +90,8 @@
 }
 
 .menu__arrow:hover {
-    color: #3cc3a5;
-    background-color: #e14594EE;
+    color: #3cc3a599;
+    background-color: #e1459499;
     cursor: pointer;
 }
 

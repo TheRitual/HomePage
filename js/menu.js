@@ -2,9 +2,12 @@
     let isMenuHidden = true;
     const arrow = document.querySelector(".js-arrow");
     const menu = document.querySelector(".js-menu");
-    const menuItems = document.querySelectorAll(".js-menuItem");
     const menuAboutMe = document.querySelector(".js-menuAboutMe");
 
+    const showMenu = () => {
+        arrow.innerHTML = "▲";
+        menu.classList.add("menu--displayed");
+    }
 
     menuAboutMe.addEventListener("mouseenter", () => {
         document.querySelector(".js-menuAboutMeList").classList.remove("menu__subList--hidden");
@@ -15,6 +18,7 @@
     });
 
     menuAboutMe.addEventListener("focusin", () => {
+        showMenu();
         document.querySelectorAll(".js-menuSubList").forEach(element => {
             element.classList.add("menu__subList--hidden");
         });
@@ -84,18 +88,11 @@
 
     arrow.addEventListener("click", () => {
         if (isMenuHidden) {
-            arrow.innerHTML = "▲";
-            menu.classList.add("menu--displayed");
+            showMenu();
         } else {
             arrow.innerHTML = "▼";
             menu.classList.remove("menu--displayed");
         }
         isMenuHidden = !isMenuHidden;
-    });
-
-    menuItems.forEach(element => {
-        element.addEventListener("click", (event) => {
-            event.target.classList.add("menu__item--active");
-        });
     });
 }
