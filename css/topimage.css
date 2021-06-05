@@ -11,20 +11,21 @@
     min-width: 1024px;
     padding: 0;
     position: relative;
-    transition: all 1.5s;
+    transition: all 500ms;
     z-index: 2;
 }
 
 .topImage__cover {
-    width: inherit;
-    height: inherit;
-    border-radius: inherit;
     background-image: url(../img/top/dummy2.jpg);
-    background-position: center;
+    background-position: inherit;
     background-size: inherit;
-    transition: all 1.5s;
+    border-radius: inherit;
     filter: blur(70px);
+    height: inherit;
+    margin: 0;
     opacity: 0;
+    transition: all 500ms;
+    width: inherit;    
 }
 
 .topImage__cover--on {
@@ -70,6 +71,7 @@
     .topImage__text {
         font-size: 25px;
         width: 200px;
-        bottom: 50px;
+        bottom: 40px;
+        left: 20px;
     }
 }
