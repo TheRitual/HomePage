@@ -1,4 +1,14 @@
 .menu {
+    border: 0;
+    margin: 0;
+    padding: 0;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 5;
+}
+
+.menu__bar {
     align-items: flex-start;
     background-color: #2b3595;
     border: 0;
@@ -6,16 +16,13 @@
     border-bottom-right-radius: 10px;
     box-shadow: #000 0px 0px 10px;
     display: flex;
-    flex-wrap: nowrap;
     height: 90px;
+    flex-wrap: nowrap;
     justify-content: space-evenly;
     margin: 0 auto;
     padding: 20px 0;
-    position: fixed;
-    top: 0;
     width: 100%;
     transition: all 1s;
-    z-index: 5;
 }
 
 .menu__item {
@@ -31,6 +38,7 @@
     position: relative;
     text-align: center;
     transition: all 0.5s;
+    user-select: none;
     z-index: 2;
 }
 
@@ -66,36 +74,81 @@
     background-color: #3cc3a5;
 }
 
+.menu__arrow {
+    color: #e14594EE;
+    margin: 5px auto;
+    font-size: 30px;
+    background-color: #7045afA0;
+    width: 50px;
+    height: 50px;
+    text-align: center;
+    padding: 10px;
+    border-radius: 50%;
+    user-select: none;
+    display: none;
+}
+
+.menu__arrow:hover {
+    color: #3cc3a5;
+    background-color: #e14594EE;
+    cursor: pointer;
+}
+
 @media (max-width: 1024px) {
     .menu {
-        height: 150px;
+        top: -150px;
+    }
+
+    .menu--displayed {
+        top: 0px;
+    }
+
+    .menu__bar {
         justify-content: space-evenly;
+        height: 150px;
         width: 100%;
     }
+
     .menu__item {
         flex-basis: 85px;
         padding: 10px;
         font-size: 15px;
         box-shadow: #fff 0px 0px 5px;
     }
+
     .menu__subList {
         padding: 0;
     }
+
     .menu_link {
         margin-bottom: 15px;
     }
+
     .menu__icon {
         display: block;
         margin: 10px auto;
         padding: 0px;
     }
+
+    .menu__arrow {
+        display: block;
+    }
 }
 
 @media (max-width: 480px) {
+
     .menu {
-        height: 90px;
+        top: -85px;
+    }
+
+    .menu--displayed {
+        top: 0px;
+    }
+
+    .menu__bar {
+        height: 85px;
         justify-content: space-evenly;
-        width: 98%;
+        width: 100%;
         left: 1%;
     }
 
@@ -105,12 +158,15 @@
         font-size: 15px;
         box-shadow: #fff 0px 0px 5px;
     }
+
     .menu__subList {
         padding: 0;
     }
+
     .menu_link {
         margin-bottom: 15px;
     }
+
     .menu__icon {
         margin: 0;
     }

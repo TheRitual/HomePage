@@ -1,7 +1,11 @@
 {
-    const linkBiogram = document.querySelector(".js-linkBiogram");
     const linkAboutMe = document.querySelector(".js-linkAboutMe");
     const linkContact = document.querySelector(".js-linkContact");
+    const linkBiogram = document.querySelector(".js-linkBiogram");
+    const linkCode = document.querySelector(".js-linkCode");
+    const linkExperience = document.querySelector(".js-linkExperience");
+    const linkGitHub = document.querySelector(".js-linkGitHub");
+
     const links = document.querySelectorAll(".js-menuLink");
 
     const topImageCover = document.querySelector(".js-topImageCover");
@@ -25,8 +29,12 @@
         useCover = !useCover;
     }
 
-    linkBiogram.addEventListener("click", () => { changeTop("dummy3.jpg", "Biogram"); });
+    
     linkAboutMe.addEventListener("click", () => { changeTop("monk.jpg", "About Me"); });
-    linkContact.addEventListener("click", () => { changeTop("dummy4.jpg", "Contact"); });
+    linkContact.addEventListener("click", () => { changeTop("monk.jpg", "Contact"); });
+    linkBiogram.addEventListener("click", () => { changeTop("monk.jpg", "Biogram"); });
+    linkCode.addEventListener("click", () => { changeTop("monk.jpg", "Coding"); });
+    linkExperience.addEventListener("click", () => { changeTop("monk.jpg", "Experience"); });
+    linkGitHub.addEventListener("click", () => { changeTop("monk.jpg", "Coding"); });
 
 }

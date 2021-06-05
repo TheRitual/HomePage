@@ -42,7 +42,7 @@
     margin: 0;
     position: relative;
     text-shadow: 2px 4px 4px#182952;
-    transition: all 1s;
+    transition: all 1ms;
     user-select: none;
     width: 300px;
 }
@@ -52,7 +52,7 @@
         min-width: 480px;
         height: 400px;
         width: 100%;
-        margin: 180px 0 0 0;
+        margin: 70  px 0 0 0;
     }
 
     .topImage__text {
@@ -64,10 +64,12 @@
     .topImage {
         margin: 110px 0 0 0;
         min-width: 200px;
+        height: 200px;
     }
 
     .topImage__text {
         font-size: 25px;
         width: 200px;
+        bottom: 50px;
     }
 }

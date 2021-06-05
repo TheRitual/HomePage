@@ -31,46 +31,55 @@
 
 <body>
   <img src="img/frames/b0.png" class="js-animation animatedImage">
-  <nav class="menu">
-    <div class="menu__item js-menuAboutMe">
-      <a href="#" class="menu__link js-menuLink js-linkAboutMe"><img src="img/icons/aboutme.png" class="menu__icon"><span class="menu__categoryText">About Me</span></a>
-      <ul class="menu__subList js-menuSubList menu__subList--hidden js-menuAboutMeList">
-        <li><a href="#" class="menu__link js-menuLink js-linkBiogram">Biogram</a></li>
-        <li><a href="#" class="menu__link js-menuLink js-linkContact">Contact</a></li>
-      </ul>
+  <nav class="menu js-menu">
+    <div class="menu__bar">
+      <div class="menu__item js-menuItem js-menuAboutMe">
+        <a href="#" class="menu__link js-menuLink js-linkAboutMe"><img src="img/icons/aboutme.png"
+            class="menu__icon"><span class="menu__categoryText">About Me</span></a>
+        <ul class="menu__subList js-menuSubList menu__subList--hidden js-menuAboutMeList">
+          <li><a href="#" class="menu__link js-menuLink js-linkBiogram">Biogram</a></li>
+          <li><a href="#" class="menu__link js-menuLink js-linkContact">Contact</a></li>
+        </ul>
+      </div>
+      <div class="menu__item js-menuItem js-menuCode">
+        <a href="#" class="menu__link js-menuLink js-linkCode"><img src="img/icons/code.png" class="menu__icon"><span
+            class="menu__categoryText">Coding</span></a>
+        <ul class="menu__subList js-menuSubList menu__subList--hidden js-menuCodeList">
+          <li><a href="#" class="menu__link js-menuLink js-linkExperience">Experience</a></li>
+          <li><a href="https://github.com/TheRitual" target="_blank" class="menu__link js-menuLink js-linkGitHub">My GitHub</a></li>
+        </ul>
+      </div>
+      <div class="menu__item js-menuItem js-menuProjects">
+        <a href="#" class="menu__link js-menuLink"><img src="img/icons/projects.png" class="menu__icon"><span
+            class="menu__categoryText">Projects</span></a>
+        <ul class="menu__subList js-menuSubList menu__subList--hidden js-menuProjectsList">
+          <li>Currency Exchange</li>
+        </ul>
+      </div>
+      <div class="menu__item js-menuItem js-menuFreeTime">
+        <a href="#" class="menu__link js-menuLink"><img src="img/icons/freetime.png" class="menu__icon"><span
+            class="menu__categoryText">Free Time</span></a>
+        <ul class="menu__subList js-menuSubList menu__subList--hidden js-menuFreeTimeList">
+          <li>Photo Edition</li>
+          <li>Video</li>
+          <li>Sport</li>
+        </ul>
+        </a>
+      </div>
+      <div class="menu__item js-menuItem js-menuPhilosophy">
+        <a href="#" class="menu__link js-menuLink"><img src="img/icons/philosophy.png" class="menu__icon"><span
+            class="menu__categoryText">Life
+            Philosophy</span></a>
+        <ul class="menu__subList js-menuSubList menu__subList--hidden js-menuPhilosophyList">
+          <li>Goals</li>
+          <li>Society</li>
+          <li>Education</li>
+        </ul>
+      </div>
     </div>
-    <div class="menu__item js-menuCode">
-      <a href="#" class="menu__link js-menuLink"><img src="img/icons/code.png" class="menu__icon"><span class="menu__categoryText">Coding</span></a>
-      <ul class="menu__subList js-menuSubList menu__subList--hidden js-menuCodeList">
-        <li>Experience</li>
-        <li>My GitHub</li>
-      </ul>
+    <div class="menu__arrow js-arrow">
+      ▼
     </div>
-    <div class="menu__item js-menuProjects">
-      <a href="#" class="menu__link js-menuLink"><img src="img/icons/projects.png" class="menu__icon"><span class="menu__categoryText">Projects</span></a>
-      <ul class="menu__subList js-menuSubList menu__subList--hidden js-menuProjectsList">
-        <li>Currency Exchange</li>
-      </ul>
-    </div>
-    <div class="menu__item js-menuFreeTime">
-      <a href="#"class="menu__link js-menuLink"><img src="img/icons/freetime.png" class="menu__icon"><span class="menu__categoryText">Free Time</span></a>
-      <ul class="menu__subList js-menuSubList menu__subList--hidden js-menuFreeTimeList">
-        <li>Photo Edition</li>
-        <li>Video</li>
-        <li>Sport</li>
-      </ul>
-      </a>
-    </div>
-    <div class="menu__item js-menuPhilosophy">
-      <a href="#" class="menu__link js-menuLink"><img src="img/icons/philosophy.png" class="menu__icon"><span class="menu__categoryText">Life
-        Philosophy</span></a>
-      <ul class="menu__subList js-menuSubList menu__subList--hidden js-menuPhilosophyList">
-        <li>Goals</li>
-        <li>Society</li>
-        <li>Education</li>
-      </ul>
-    </div>
-
   </nav>
 
   <div class="topImage js-topImage">
@@ -147,7 +156,7 @@
         <h3 class="main__subCategoryHeader">
           Photo Edition
         </h3>
-        <article class="main__article" >
+        <article class="main__article">
           About My Photo Edition
         </article>
       </section>
