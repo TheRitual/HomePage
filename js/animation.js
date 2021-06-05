@@ -10,7 +10,7 @@
     }
 
     let position = {
-        x: window.innerWidth / 2,
+        x: Math.floor(window.innerWidth / 2),
         y: 400,
     }
 

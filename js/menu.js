@@ -3,6 +3,7 @@
     const arrow = document.querySelector(".js-arrow");
     const menu = document.querySelector(".js-menu");
     const menuAboutMe = document.querySelector(".js-menuAboutMe");
+    const menuLinks = document.querySelectorAll(".js-menuLink");
 
     const showMenu = () => {
         arrow.innerHTML = "▲";
@@ -84,6 +85,21 @@
         });
         document.querySelector(".js-menuPhilosophyList").classList.remove("menu__subList--hidden");
     });
+
+    const scrollUp = () => {
+        if (window.innerWidth > 1024) {
+            window.scrollTo(0, window.scrollY - 100);
+        } else {
+            window.scrollTo(0, window.scrollY - 210);
+        }
+    }
+
+    menuLinks.forEach(element => {
+        element.addEventListener("click", () => {
+            setTimeout(scrollUp, 10);
+        });
+    });
+
 
 
     arrow.addEventListener("click", () => {
